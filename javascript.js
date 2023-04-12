@@ -1,30 +1,33 @@
+const result = ["Rock", "Paper", "Sciccors"]
+
 function getComputerChoice(){
-    let result = ["Rock", "Paper", "Sciccors"]
-    let computerChoice = Math.floor(Math.random() * (result.length));
-    return computerChoice()
-        if (result === 0){
-            return "Rock";
-        } else if (result === 1){
-            if (result === 1){
-                return "Paper";
-            }
-        } else (result === 2){
-            return "Sciccors";}
-};
+    let choice = Math.floor(Math.random() * (result.length));
+    return choice
+}
+getComputerChoice();
 
 
 
-function playRound(playerSelection, computerSelection) {
-    // your code here
-if (playerSelection === 0 && computerSelection === 0){
-    return `It's a tie!`;
-} else if (playerSelection > computerSelection){
-    return `Player wins!`;
-} else (playerSelection < computerSelection)
-    return `Computer wins`;
+function playRound(playerSelection, computerSelection){
+if (playerSelection == computerSelection){
+    return "It's a tie!
+}
+else if (playerSelection == "Rock" && computerSelection == "Scissors"){
+  return "Player wins!"
+} else if (playerSelection == "Paper" && computerSelection == "Rock"){
+  return "Player wins!"
+} else if (playerSelection == "Scissors" && computerSelection == "Paper"){
+  return "Player wins!"
+} else if (playerSelection == "Scissors" && computerSelection == "Rock"){
+  return "Computer wins!"
+  } else if (playerSelection == "Rock" && computerSelection == "Paper"){
+  return "Computer wins!"
+   } else (playerSelection == "Paper" && computerSelection == "Scissors"){
+  return "Computer wins!"}
 }
 
-
-  const playerSelection = "paper";
+  const playerSelection = "Rock";
   const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+  console.log(playerSelection);
+  console.log(computerSelection);
+  console.log(playRound(playerSelection, computerSelection))
