@@ -5,8 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game - Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="./stylesheet.css">
 </head>
 <body>
+
+<h1>This is a Rock, Paper, Scissors game prototype.</h1>
+<div>
+<p>This game is played with user choice of the Rock, Paper or Scissors, entered into the input. <br>
+    On the click of the Start Game button the choice is presented to the Computer, what will make a random choice and compare both. <br>
+    There can be a tie, but otherwise the User of Computer wins.
+</p>
+
+<input type="text" id="user-input" placeholder="Enter your choice!">
+<button id="play-button" onclick= "validator()""> Start game</button>
+</div>
+
+<div>
+<p>Result of the game:</p>
+<h1>
+<div id="result">
+</div>
+</h1>
+</div>
+
     <script src="./javascript.js"></script>
 </body>
 </html>
